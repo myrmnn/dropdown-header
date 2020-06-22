@@ -14,6 +14,7 @@ body{
     background-size: cover;
     background-position: right;
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .logo-img{
@@ -22,10 +23,12 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
+    border-bottom-left-radius: 5px;
 }
 
 .logo-header{
-    background-color: whitesmoke;
+    background-color: white;
+    padding-top: 20px;
 }
 
 .logo-centered{
@@ -37,6 +40,7 @@ align-items: center;
 background-color: #56b6df;
 max-width: 500px;
 margin: 0 auto;
+border-radius: 5px;
 }
 
 .logo-title{
@@ -47,61 +51,126 @@ margin: 0 auto;
     font-family: 'The Girl Next Door', cursive;
 }
 
-.navbar{
-width: 100%;
-height: 60px;
-background-color: whitesmoke;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
+.topnav{
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-
-
-i{
-    font-size: .9rem;
-}
-
-.outer-link{
-    margin: 0 40px;
-}
-
-.navbar-list li{
+.topnav a{
+    justify-content: center;
     float: left;
-    list-style: none;
-    position: relative;
-}
-
-.inner-list{
-    position: absolute;
-    background-color: whitesmoke;
-    border-radius: 0 0 5px 5px;
-    width: 190px;
-    display: none;
-}
-
-.navbar-list li:hover .inner-list {
-    display: block;
-}
-
-a {
-    display: block;
     color: black;
-    font-size: 1.3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 14px 0px;
+    text-align: center;
+    padding: 16px 16px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
-.inner-list a{
-margin-left: 40px;
+.topnav .active {
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 
-a:hover{
-   text-decoration: underline;
-   color: #56b6df;
+.topnav .icon{
+    display: none;
 }
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 16px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgb(184, 214, 240);
+    min-width: 160px;
+    border-radius: 0 0 4px 4px;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    float: none;
+    padding: 15px 10px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    color: #56b6df;
+  }
+
+  .dropdown-is-visible{
+      display: block;
+  }
+
+  .rotate{
+      transform: rotate(180deg);
+      transition: transform .5s ease;
+
+  }
+  @media screen and (max-width: 700px) {
+
+    .logo-centered {
+        border-radius: 0;
+    }
+
+    .topnav{
+        display: block;
+    }
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+
 
 @media screen and (min-width:350px){
     .logo-title{
@@ -133,12 +202,5 @@ a:hover{
 }
 
 @media screen and (max-width: 1100px){
-    .navbar{
-        background-color: lawngreen;
-    }
-
-    .inner-list{
-        position: relative;
-    }
 
 }

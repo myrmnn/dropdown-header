@@ -23,36 +23,35 @@
         </div>
     </header>
 
-    <nav class="navbar">
-        <ul class="navbar-list">
-            <li><a href="index.html" class="outer-link">Home</a></li>
-            <li><a href="reiki.html" class="outer-link">Reiki <i class="fas fa-chevron-down"></i></a>
-                <ul class="inner-list">
-                    <li><a href="">About Reiki</a></li>
-                    <li><a href="">Why Reiki?</a></li>
-                    <li><a href="">Benefits</a></li>
-                </ul>
-            </li>
-            <li><a href="about.html" class="outer-link">About</a></li>
-            <li><a href="#" class="outer-link">Services <i class="fas fa-chevron-down"></i></a>
-                <ul class="inner-list">
-                    <li><a href="#individual">Individuals</a></li>
-                    <li><a href="#groups">Family/groups</a></li>
-                    <li><a href="#business">Business</a></li>
-                    <li><a href="#pets">Pets/Animals</a></li>
-                </ul>
-            </li>
-            <li><a href="#" class="outer-link">Testimonials</a></li>
-            <li><a href="#" class="outer-link">Contact</a></li>
-            <li><a href="#" class="outer-link">Forms <i class="fas fa-chevron-down"></i></a>
-                <ul class="inner-list">
-                    <li><a href="#Intake">Intake Form</a></li>
-                    <li><a href="#Consent">Consent Form</a></li>
-                </ul>
-            </li>
-        </ul>
+    <nav class="topnav" id="myTopnav">
+        <a href="#" class="active">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Reiki
+                <i class="fa fa-caret-down carrot"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">About Reiki</a>
+                <a href="#">Why Reiki?</a>
+                <a href="#">Benefits</a>
+            </div>
+        </div>
+        <a href="#">About</a>
+        <div class="dropdown">
+            <button class="dropbtn dropbtn2">Services
+                <i class="fa fa-caret-down carrot2"></i>
+            </button>
+            <div class="dropdown-content dropdown-content2">
+                <a href="#">Individuals</a>
+                <a href="#">Family & groups</a>
+                <a href="#">Businesses</a>
+                <a href="#">Animals & Pets</a>
+                <a href="#">Distance & Absentee</a>
+            </div>
+        </div>
+        <a href="#">Testimonials</a>
+        <a href="#">Contact</a>
+        <a href="javascript:void(0)" class="icon">&#9776;</a>
     </nav>
-
-
+<script src="app.js"></script>
 </body>
 </html>
